@@ -13,7 +13,7 @@ header img {
 }
 section {
   margin-top: 1em;
-  font-size: 120%;
+  font-size: 100%;
   padding: 20px;
   background: #fff;
 }
@@ -88,4 +88,8 @@ footer {
 footer nav {
   float: none;
 }
+div.signout {
+ float: right;
+}
+
 
