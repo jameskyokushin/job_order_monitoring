@@ -1,22 +1,21 @@
-<h1>Job-Order Monitoring</h1>
+<h1>Listing jobs</h1>
 
 <table>
   <tr>
     <th>Date time started</th>
-    <th>Ref no</th>
     <th>Company</th>
-   
+    <th>Address</th>
     <th>Technical</th>
-    
-   
-    
-  
-   
-   
-    
-    <th>Status</th>
+    <th>Ref no</th>
+    <th>Contact no</th>
+    <th>System model</th>
+    <th>Contact person</th>
+    <th>Todo</th>
+    <th>Work done</th>
+    <th>Remarks</th>
+    <th>Date time finished</th>
     <th>Prepared by</th>
-    
+    <th>Status</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,25 +24,26 @@
 <% @jobs.each do |job| %>
   <tr>
     <td><%= job.date_time_started %></td>
-    <td><%= job.ref_no %></td>
     <td><%= job.company %></td>
-   
+    <td><%= job.address %></td>
     <td><%= job.technical %></td>
-   
-   
-    
-    
-    
-    <td><%= job.status %></td>
+    <td><%= job.ref_no %></td>
+    <td><%= job.contact_no %></td>
+    <td><%= job.system_model %></td>
+    <td><%= job.contact_person %></td>
+    <td><%= job.todo %></td>
+    <td><%= job.work_done %></td>
+    <td><%= job.remarks %></td>
+    <td><%= job.date_time_finished %></td>
     <td><%= job.prepared_by %></td>
-   
-    <td><%= link_to 'View', job %></td>
-    <td><%= link_to 'Update', edit_job_path(job) %></td>
-    <td><%= link_to 'Approved', job, :confirm => 'Are you sure?'%></td>
+    <td><%= job.status %></td>
+    <td><%= link_to 'Show', job %></td>
+    <td><%= link_to 'Edit', edit_job_path(job) %></td>
+    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
+<br />
 
-
-
+<%= link_to 'New Job', new_job_path %>
