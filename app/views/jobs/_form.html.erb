@@ -1,17 +1,21 @@
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
-  <%= f.input :date_time_started %>
+  <%= f.input :date_time_started,:include_blank => false, :start_year => 2011 %>
+  <%= f.input :ref_no %>
   <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
-  <%= f.input :company %>
+  <%= f.input :address %>
+  <%= f.input :technical %>
+  <%= f.input :contact_no %>
+  <%= f.input :system_model %>
+  <%= f.input :contact_person %>
+  <%= f.input :todo %>
+  <%= f.input :work_done %>
+  <%= f.input :remarks %>
+  <%= f.input :date_time_finished, :include_blank => false, :start_year => 2011 %>
+  <div class="status">
+  <%= f.input :prepared_by, :include_blank => false, :collection => [["- Select -"," Unknown "],["chris@asi.com.ph","chris@asi.com.ph"],["adrian@asi.com.ph", "adrian@asi.com.ph"]] %>
+  <%= f.input :status, :include_blank => false, :collection => [["- Select -"," Unknown "],["Working", "Working"],["Pending", "Pending"],["Done", "Done"]] %>
+   </div>
   <% end %>
 
   <%= f.buttons %>

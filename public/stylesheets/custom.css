@@ -1,5 +1,5 @@
 .container {
-  width: 900px;
+  width: 1200px;
 }
 body {
   background: #cff;
@@ -16,6 +16,10 @@ section {
   font-size: 110%;
   padding: 20px;
   background: #fff;
+}
+div.status {
+ float: center;
+ font-size: 120%;
 }
 section h1 {
   font-size: 200%;
