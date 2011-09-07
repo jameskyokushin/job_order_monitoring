@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date_time_started: 2011-09-07 09:37:56
+  company: MyString
+  address: MyString
+  technical: MyString
+  ref_no: 1
+  contact_no: 1
+  system_model: MyString
+  contact_person: MyString
+  todo: MyText
+  work_done: MyText
+  remarks: MyText
+  date_time_finished: 2011-09-07 09:37:56
+  prepared_by: MyString
+  status: MyString
+
+two:
+  date_time_started: 2011-09-07 09:37:56
+  company: MyString
+  address: MyString
+  technical: MyString
+  ref_no: 1
+  contact_no: 1
+  system_model: MyString
+  contact_person: MyString
+  todo: MyText
+  work_done: MyText
+  remarks: MyText
+  date_time_finished: 2011-09-07 09:37:56
+  prepared_by: MyString
+  status: MyString
