@@ -5,7 +5,7 @@ JobOrder001::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "pages#home"
+  root :to => "jobs#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

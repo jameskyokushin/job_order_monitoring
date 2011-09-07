@@ -9,7 +9,8 @@
    
       <section class="round">
         <div class="signout">
-          <%= link_to "Job Order ", '#' %> |
+          <%= link_to 'Listing Job', jobs_path %> |
+          <%= link_to "Job Order ", new_job_path %> |
           <%= link_to "Pending ",  '#' %> |
           <%= link_to "Work Done ",  '#' %> |
           <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %>

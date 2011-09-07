@@ -1,4 +1,4 @@
-<h1>Listing jobs</h1>
+<h1>Job-Order Monitoring</h1>
 
 <table>
   <tr>
@@ -10,7 +10,7 @@
     
    
     
-    <th>Contact person</th>
+  
    
    
     
@@ -31,19 +31,19 @@
     <td><%= job.technical %></td>
    
    
-    <td><%= job.contact_person %></td>
+    
     
     
     <td><%= job.status %></td>
     <td><%= job.prepared_by %></td>
    
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'View', job %></td>
+    <td><%= link_to 'Update', edit_job_path(job) %></td>
+    <td><%= link_to 'Approved', job, :confirm => 'Are you sure?'%></td>
   </tr>
 <% end %>
 </table>
 
-<br />
 
-<%= link_to 'New Job', new_job_path %>
+
+
