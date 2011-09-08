@@ -1,5 +1,5 @@
 .container {
-  width: 900px;
+  width: 950px;
 }
 body {
   background: #cff;
@@ -13,7 +13,7 @@ header img {
 }
 section {
   margin-top: 1em;
-  font-size: 100%;
+  font-size: 115%;
   padding: 20px;
   background: #fff;
 }

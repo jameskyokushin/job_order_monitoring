@@ -2,20 +2,41 @@
   <%= f.inputs do %>
   <%= f.input :date_time_started, :default       => Date.today,
                                   :start_year    => 2011,
-                                  :include_blank => false %>
-  <%= f.input :ref_no %>
-  <%= f.input :company %>
-  <%= f.input :contact_person %>
-  <%= f.input :address %>
-  <%= f.input :contact_no %>
-  <%= f.input :system_model %>
-  <%= f.input :technical %>
-  <%= f.input :todo %>
-  <%= f.input :work_done %>
-  <%= f.input :remarks %>
+                                  :include_blank => false,  
+                                  :label => "Time/Date Started" %>
+
+  <%= f.input :ref_no,            :label => "Reference No:" %>
+
+  <%= f.input :company,           :label => "Company" %>
+
+  <%= f.input :contact_person,    :label => "Contact Person" %>
+
+  <%= f.input :address,           :label => "Address" %>
+
+  <%= f.input :contact_no,        :label => "Contact No:" %>
+
+  <%= f.input :system_model,      :label => "System / Model" %>
+
+  <%= f.input :technical,         :label => "Technical / Installer" %>
+
+  <%= f.input :todo,              :label => "To Do" %>
+
+  <%= f.input :work_done,         :label => "Work Done" %>
+
+  <%= f.input :remarks,           :label => "Remarks" %>
+
   <div class="status">
-  <%= f.input :prepared_by, :include_blank => false, :collection => [["- Select -"," admin "],["steven@asi.com.ph", "steven@asi.com.ph"],["chris@asi.com.ph","chris@asi.com.ph"],["adrian@asi.com.ph", "adrian@asi.com.ph"],["elzy.gensan@asi.com.ph", "elzy.gensan@asi.com.ph"],["stephene@asi.com.ph", "stephene@asi.com.ph"]] %>
-  <%= f.input :status, :include_blank => false, :collection => [["ONGOING", "ONGOING"],["PENDING", "PENDING"],["FINISHED","FINISHED"]] %>
+  <%= f.input :prepared_by,       :include_blank => false, 
+                                  :collection => [["- Select -"," admin "],
+                                           ["steven@asi.com.ph", "steven@asi.com.ph"], 
+                                           ["chris@asi.com.ph","chris@asi.com.ph"],
+                                           ["adrian@asi.com.ph", "adrian@asi.com.ph"],
+                                           ["elzy.gensan@asi.com.ph", "elzy.gensan@asi.com.ph"],  
+                                           ["stephene@asi.com.ph", "stephene@asi.com.ph"]] %>
+
+  <%= f.input :status,             :include_blank => false, 
+                                   :collection => [["ONGOING", "ONGOING"],
+                                                  ["PENDING", "PENDING"]] %>
    </div>
   <% end %>
 
