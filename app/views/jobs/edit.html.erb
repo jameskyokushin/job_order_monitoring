@@ -1,6 +1,27 @@
 <h1>Update Job Order</h1>
+<%= semantic_form_for(@job) do |f| %>
+  <%= f.inputs do %>
+  
+  
+ 
+  
+  
+  
+  <%= f.input :technical %>
+ 
+  <%= f.input :todo %>
+  <%= f.input :work_done %>
+  <%= f.input :remarks %>
+  <%= f.input :date_time_finished, :include_blank => false, :start_year => 2011 %>
+  <div class="status">
+  
+  <%= f.input :status, :include_blank => false, :collection => [["- Select -"," Unknown "],["Working", "Working"],["Pending", "Pending"],["Done", "Done"]] %>
+   </div>
+  <% end %>
 
-<%= render 'form' %>
+  <%= f.buttons %>
+<% end %>
 
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>
+
+<%= link_to 'Print', @job %> |
+
