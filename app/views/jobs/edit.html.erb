@@ -5,7 +5,7 @@
   <%= f.input :todo %>
   <%= f.input :work_done %>
   <%= f.input :remarks %>
-  <%= f.input :date_time_finished, :start_year => 2011 %>
+  <%= f.input :date_time_finished,:include_blank => false, :start_year => 2011 %>
   <div class="status">
   
   <%= f.input :status, :include_blank => false, :collection => [["- Select -"," Unknown "],["Working", "Working"],["Pending", "Pending"],["Done", "Done"]] %>
