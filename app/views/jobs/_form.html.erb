@@ -11,10 +11,9 @@
   <%= f.input :todo %>
   <%= f.input :work_done %>
   <%= f.input :remarks %>
-  <%= f.input :date_time_finished, :include_blank => false, :start_year => 2011 %>
   <div class="status">
-  <%= f.input :prepared_by, :include_blank => false, :collection => [["- Select -"," Unknown "],["chris@asi.com.ph","chris@asi.com.ph"],["adrian@asi.com.ph", "adrian@asi.com.ph"]] %>
-  <%= f.input :status, :include_blank => false, :collection => [["- Select -"," Unknown "],["Working", "Working"],["Pending", "Pending"],["Done", "Done"]] %>
+  <%= f.input :prepared_by, :include_blank => false, :collection => [["- Select -"," admin "],["steven@asi.com.ph", "steven@asi.com.ph"],["chris@asi.com.ph","chris@asi.com.ph"],["adrian@asi.com.ph", "adrian@asi.com.ph"]] %>
+  <%= f.input :status, :include_blank => false, :collection => [[" Working ","Working"],["Pending", "Pending"],["Work Done", "Work Done"]] %>
    </div>
   <% end %>
 
