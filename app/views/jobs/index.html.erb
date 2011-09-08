@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Date time started</th>
-    <th>JO-Ref No:</th>
+ 
     <th>Company</th>
    
     
@@ -14,7 +14,7 @@
   
     <th>Prepared by</th>
     <th>Status</th>
-    <th></th>
+    <th>JO-Ref No:</th>
     <th></th>
     <th></th>
   </tr>
@@ -22,7 +22,6 @@
 <% @jobs.each do |job| %>
   <tr>
     <td><%= job.date_time_started %></td>
-    <td><%= job.ref_no %></td>
     <td><%= job.company %></td>
    
     
@@ -34,7 +33,7 @@
     
     <td><%= job.prepared_by %></td>
     <td><%= job.status %></td>
-    <td><%= link_to 'View', job %></td>
+    <td><%= link_to job.ref_no, job_path(job) %></td>
     <td><%= link_to 'Update', edit_job_path(job) %></td>
     <td><%= link_to 'Approved', job, :confirm => 'Are you sure?' %></td>
   </tr>
