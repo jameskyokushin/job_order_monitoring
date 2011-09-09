@@ -41,9 +41,9 @@ class JobsController < ApplicationController
   # POST /jobs.xml
   def create
     @job = Job.new(params[:job])
-
+    
     respond_to do |format|
-      if @job.save
+      if @job.save 
         format.html { redirect_to(@job, :notice => 'Job was successfully created.') }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else

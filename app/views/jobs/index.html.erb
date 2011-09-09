@@ -3,7 +3,7 @@
 <table>
   <tr>
     
- 
+    <th>JO-Ref No:</th>
     <th>Company</th>
    
     
@@ -14,15 +14,15 @@
   
     <th>Prepared by</th>
     <th>Status</th>
-    <th>JO-Ref No:</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @jobs.each do |job| %>
   <tr>
-    
+    <td><%= link_to job.id, job_path(job) %></td>
     <td><%= job.company %></td>
+    
    
     
    
@@ -33,7 +33,6 @@
     
     <td><%= job.prepared_by %></td>
     <td><%= job.status %></td>
-    <td><%= link_to job.ref_no, job_path(job) %></td>
     <td><%= link_to 'Update', edit_job_path(job) %></td>
     <!-- <td><%= link_to 'Done', job, :confirm => 'Working Properly?' %></td> -->
     <!-- <td><%= link_to 'Trash', job, :confirm => 'Are you sure?', :method => :delete %></td>-->
