@@ -9,10 +9,12 @@
    
       <section class="round">
         <div class="signout">
-          <%= link_to 'Listing Job', jobs_path %> |
+          
+          <%= link_to 'JO List', jobs_path %> |
           <%= link_to "Job Order ", new_job_path %> |
-          <%= link_to "Work Done ",  '#' %> |
+          <%= link_to "Accomplish ",  '#' %> |
           <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %>
+          <h5>v.2.0</h5>
           
         </div>
         <%= yield %>
