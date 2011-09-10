@@ -6,15 +6,11 @@
 </head>
 <body>
   <div class="container">
-   
+   <%= render 'layouts/header' %>
       <section class="round">
         <div class="signout">
           
-          <%= link_to 'JO List', jobs_path %> |
-          <%= link_to "Job Order ", new_job_path %> |
-          <%= link_to "Accomplish ",  '#' %> |
-          <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %>
-          <h5>v.2.8</h5>
+          <h5>v.3.0.0</h5>
           
         </div>
         <%= yield %>

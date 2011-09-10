@@ -1,10 +1,11 @@
 <header>
-        <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
+       
         <nav class="round">
           <ul>
-            <li><%= link_to "Home", '#' %></li>
-            <li><%= link_to "Help", '#' %></li>
-            <li><%= link_to "Sign in", '#' %></li>
+            <li><%= link_to 'JO List', jobs_path %></li>
+            <li><%= link_to "Job Order ", new_job_path %></li>
+            <li><%= link_to "Accomplished ",  '#' %></li>
+            <li><%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %></li>
           </ul>
         </nav>
 </header>

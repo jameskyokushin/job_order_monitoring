@@ -1,7 +1,10 @@
+<header>
+        <%= image_tag("header.jpg", :alt => "ASI-HEADER", :class => "round") %>
+</headers>
 <style type="text/css">
-h4 { color:olive; }
-h6 { color: #5C5858 }
-b { color:#000; }
+h4 { color:olive;font-size: 14pt; }
+h6 { color: #5C5858;font-size: 12pt; }
+b { color:#000; font size="3" }
 </style>
   <p id="notice"><%= notice %></p>
    <div align="center">
@@ -30,21 +33,28 @@ b { color:#000; }
        <td><h6><b>Contact No:</b><%= @job.contact_no %></h6></td>
        <td></td>
      </tr>
+     </table>
+     <table border="5" cellpadding="2" cellspacing="2" width="200%">
      <tr>
        <td><h6><b>To Do:</b><%= @job.todo %></h6></td>
-       <td></td>
      </tr>
      <tr>
        <td><h6><b>Work Done:</b><%= @job.work_done %></h6></td>
-       <td></td>
      </tr>
      <tr>
        <td><h6><b>Remarks:</b><%= @job.remarks %></h6></td>
-       <td></td>
      </tr>
+     </table>
+     <table border="5" cellpadding="2" cellspacing="2" width="100%">
      <tr>
        <td><h6><b>Prepared by:</b><%= @job.prepared_by %></h6></td>
+     </tr>
+     <tr>
        <td><h6><b>Status:</b><%= @job.status %></h></td>
      </tr>
    </table>
  </div>
+</span>
+<input type=button onclick="window.print()" value='PRINT'> 
+
+

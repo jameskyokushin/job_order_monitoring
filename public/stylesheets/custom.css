@@ -8,8 +8,12 @@ header {
   padding-top: 20px;
 }
 header img {
-  padding: 1em;
+  padding: 0em;
   background: #fff;
+  width: 900px;
+}
+div.asihead {
+
 }
 section {
   margin-top: 2em;
