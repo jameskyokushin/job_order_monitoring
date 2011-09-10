@@ -1,6 +1,6 @@
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
-  <%= f.input :date_time_started, :default       => Date.today,
+  <%= f.input :created_at,        
                                   :start_year    => 2011,
                                   :include_blank => false,  
                                   :label => "Time/Date Started" %>
