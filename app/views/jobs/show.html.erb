@@ -14,7 +14,7 @@ b { color:#000; font size="3" }
        <th></th>
      </tr>
      <tr>
-       <td><h6><b>Datetime Started:</b><%= @job.date_time_started %></h6></td>
+       <td><h6><b>Datetime Started:</b><%= @job.created_at %></h6></td>
        <td><h6><b>Datetime Finished:</b><%= @job.date_time_finished %></h6></td>
      </tr>
      <tr>
@@ -56,5 +56,11 @@ b { color:#000; font size="3" }
  </div>
 </span>
 <input type=button onclick="window.print()" value='PRINT'> 
+<script type="text/javascript">
+function savePageAsPDF() {
+   var pURL = "http://savepageaspdf.pdfonline.com/pdfonline/pdfonline.asp?cURL=" + escape(document.location.href);
+  window.open(pURL, "PDFOnline", "scrollbars=yes, resizable=yes,width=640, height=480,menubar,toolbar,location");
+</script>
+<a href="javascript:savePageAsPDF()">Save Page As PDF</a>
 
 
