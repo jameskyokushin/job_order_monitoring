@@ -1,11 +1,20 @@
+<style type="text/css" media="print">
+ #noprint {display: none;} 
+       // Hide unwanted elements
+ body {background:fff; color:000;} 
+       // Black text on White background
+ a {text-decoration: underline; color:00f;} 
+       //Underline Hyperlinks in blue
+}
+</style> 
 <header>
        
         <nav class="round">
           <ul>
-            <li><%= link_to 'JO List', jobs_path %></li>
-            <li><%= link_to "Job Order ", new_job_path %></li>
-            <li><%= link_to "Accomplished ",  '#' %></li>
-            <li><%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %></li>
+            <span class="noprint"><li><%= link_to 'JO List', jobs_path %></li></span>
+            <span class="noprint"><li><%= link_to "Job Order ", new_job_path %></li></span>
+            <span class="noprint"><li><%= link_to "Accomplished ",  '#' %></li></span>
+            <span class="noprint"><li><%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %></li></span>
           </ul>
         </nav>
 </header>
