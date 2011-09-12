@@ -25,6 +25,8 @@
 
   <%= f.input :remarks,           :label => "Remarks" %>
 
+  
+
   <div class="status">
   <%= f.input :prepared_by,       :include_blank => false, 
                                   :collection => [["- Select -"," admin "],
@@ -41,4 +43,5 @@
   <% end %>
 
   <%= f.buttons %>
+  
 <% end %>

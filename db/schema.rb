@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110907065023) do
+ActiveRecord::Schema.define(:version => 20110912010135) do
 
   create_table "jobs", :force => true do |t|
     t.timestamp "date_time_started"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20110907065023) do
     t.string    "status"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.boolean   "done"
   end
 
   create_table "users", :force => true do |t|

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def home
+  def accomplished
   end 
   
   def current_user

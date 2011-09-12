@@ -35,7 +35,7 @@ b { color:#000; font size="3" }
        <td></td>
      </tr>
      </table>
-     <table border="5" cellpadding="2" cellspacing="2" width="200%">
+     <table border="5" cellpadding="2" cellspacing="2" width="100%">
      <tr>
        <td><h6><b>To Do:</b><%= @job.todo %></h6></td>
      </tr>
@@ -49,14 +49,17 @@ b { color:#000; font size="3" }
      <table border="5" cellpadding="2" cellspacing="2" width="100%">
      <tr>
        <td><h6><b>Prepared by:</b><%= @job.prepared_by %></h6></td>
+       <td><h6><b>Approved by:</b>____________________</h></td>
      </tr>
      <tr>
        <td><h6><b>Status:</b><%= @job.status %></h></td>
+       <td><h6><b>Client Signature:</b>____________________</h></td>
      </tr>
+    
    </table>
  </div>
 </span>
-<input type=button onclick="window.print()" value='PRINT'> 
+<!--<input type=button onclick="window.print()" value='PRINT'>-->
 
 
 

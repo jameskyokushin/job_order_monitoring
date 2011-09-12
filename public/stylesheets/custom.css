@@ -46,7 +46,7 @@ nav {
 }
 nav {
   background-color: white;
-  padding: 0 0.7em;
+  padding: 0 1.7em;
   white-space: nowrap;
 }
 nav ul {
@@ -59,7 +59,7 @@ nav ul li {
   padding: 0.2em 0;
 }
 nav ul li a {
-  padding: 0 5px;
+  padding: 0 10px;
   font-weight: bold;
 }
 nav ul li a:visited {

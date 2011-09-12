@@ -6,15 +6,17 @@
  a {text-decoration: underline; color:00f;} 
        //Underline Hyperlinks in blue
 }
-</style> 
+</style>
+<span class="noprint">
 <header>
        
         <nav class="round">
           <ul>
-            <span class="noprint"><li><%= link_to 'JO List', jobs_path %></li></span>
-            <span class="noprint"><li><%= link_to "Job Order ", new_job_path %></li></span>
-            <span class="noprint"><li><%= link_to "Accomplished ",  '#' %></li></span>
-            <span class="noprint"><li><%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %></li></span>
+            <li><%= link_to 'JO List', jobs_path %></li>
+            <li><%= link_to "Job Order ", new_job_path %></li>
+            <li><%= link_to "Accomplished ",  accomplished_path %></li>
+            <li><%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %></li>
           </ul>
         </nav>
 </header>
+</span>

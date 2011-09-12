@@ -18,9 +18,10 @@
   <%= f.input :status,            :include_blank => false,  
                                   :collection => [["ONGOING", "ONGOING"],
                                                  ["FINISHED","FINISHED"]] %>
+  <!--<%= f.input :done,              :label => "Working", :hint => "Please check if its working" %>-->
    </div>
   <% end %>
-
+  
   <%= f.buttons %>
 <% end %>
 
