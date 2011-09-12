@@ -1,9 +1,11 @@
 JobOrder001::Application.routes.draw do
-  
   resources :jobs
 
   devise_for :users
-  match '/accomplished', :to => 'pages#accomplished'
+
+  put "/accomplished/:id" => "pages#accomplished", :as => "accomplished"
+
+  
   root :to => "jobs#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

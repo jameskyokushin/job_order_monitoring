@@ -34,7 +34,8 @@
     <td><%= job.prepared_by %></td>
     <td><%= job.status %></td>
     <td><%= link_to 'Update', edit_job_path(job) %></td>
-    <!-- <td><%= link_to 'Done', job, :confirm => 'Working Properly?' %></td> -->
+    <td><%= link_to "Done",  '#', :method => :put %><td>
+    
     <td><%= link_to 'Trash', job, :confirm => 'Are you sure?', :method => :delete %>
   </tr>
 <% end %>
