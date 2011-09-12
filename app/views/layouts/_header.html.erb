@@ -12,9 +12,9 @@
        
         <nav class="round">
           <ul>
-            <li><%= link_to 'JO List', jobs_path %></li>
-            <li><%= link_to "Job Order ", new_job_path %></li>
-            <li><%= link_to "Accomplished ", accomplished_jobs_path %></li>
+            <li><%= link_to "Add JO ", new_job_path %></li>
+            <li><%= link_to 'Ongoing', jobs_path %></li>
+            <li><%= link_to "Finished ", accomplished_jobs_path %></li>
             <li><%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %></li>
           </ul>
         </nav>
