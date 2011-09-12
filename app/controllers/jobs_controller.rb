@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = Job.all
+    @jobs = Job.where(:done => nil)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,5 +79,19 @@ class JobsController < ApplicationController
       format.html { redirect_to(jobs_url) }
       format.xml  { head :ok }
     end
+  end
+
+
+  # put /jobs/1/mark_as_done
+  def mark_as_done
+    job = Job.find params[:id]
+    job.update_attributes(:done => true)
+    redirect_to accomplished_jobs_path
+  end
+
+  # get /jobs/accomplished
+  def accomplished
+    @jobs = Job.where(:done => true)
+    render :template => "jobs/index"
   end
 end

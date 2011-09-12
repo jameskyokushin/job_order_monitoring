@@ -1,5 +1,8 @@
 JobOrder001::Application.routes.draw do
-  resources :jobs
+  resources :jobs do
+    put :mark_as_done, :on => :member
+    get :accomplished, :on => :collection
+  end
 
   devise_for :users
 
