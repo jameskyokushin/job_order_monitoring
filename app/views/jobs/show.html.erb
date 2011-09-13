@@ -1,10 +1,17 @@
+<div class="jo-link">
+  <%= link_to "Add JO ", new_job_path %> |
+  <%= link_to 'Ongoing', jobs_path %> |
+  <%= link_to "Finished ", accomplished_jobs_path %> |
+  <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> |
+  <h5>v.3.0.3</h5>
+</div>
 <header>
         <%= image_tag("header2.1.jpg", :alt => "ASI-HEADER", :class => "round") %>
 </headers>
 
 <style type="text/css">
 h4 { color:olive;font-size: 16pt; }
-h6 { color: #5C5858;font-size: 14pt; }
+p { color: #5C5858;font-size: 14pt; }
 b { color:#000; font size="4" }
 </style>
   <p id="notice"><%= notice %></p>

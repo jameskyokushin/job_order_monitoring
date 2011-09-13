@@ -1,3 +1,9 @@
+<div class="jo-link">
+  <%= link_to "Add JO ", new_job_path %> |
+  <%= link_to 'Ongoing', jobs_path %> |
+  <%= link_to "Finished ", accomplished_jobs_path %> |
+  <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> |
+</div>
 <h4>Enter New job Order</h4>
 
 <%= render 'form' %>

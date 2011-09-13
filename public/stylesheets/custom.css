@@ -10,10 +10,10 @@ header {
 header img {
   padding: 0em;
   background: #fff;
-  width: 700px;
+  width: 800px;
 }
-div.asihead {
-
+div.jo-link {
+ float: right;
 }
 section {
   margin-top: 2em;
@@ -42,7 +42,8 @@ a:visited {
   color: #069;
 }
 nav {
-  float: right;
+  float: left;
+  width: 905px;
 }
 nav {
   background-color: white;

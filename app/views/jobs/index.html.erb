@@ -1,17 +1,16 @@
+<div class="jo-link">
+  <%= link_to "Add JO ", new_job_path %> |
+  <%= link_to 'Ongoing', jobs_path %> |
+  <%= link_to "Finished ", accomplished_jobs_path %> |
+  <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> |
+  <h5>v.3.0.3</h5>
+</div>
 <h1>Job Order</h1>
-
 <table>
   <tr>
-    
     <th>Ref No:</th>
     <th>Company</th>
-   
-    
-   
     <th>Technical</th>
- 
-  
-  
     <th>Prepared by</th>
     <th>Status</th>
     <th></th>
@@ -22,15 +21,7 @@
   <tr>
     <td><%= link_to job.id, job_path(job) %></td>
     <td><%= job.company %></td>
-    
-   
-    
-   
     <td><%= job.technical %></td>
-   
-   
-  
-    
     <td><%= job.prepared_by %></td>
     <td><%= job.status %></td>
     <td><%= link_to 'Update', edit_job_path(job) %></td>
@@ -39,7 +30,7 @@
   </tr>
 <% end %>
 </table>
-
+ 
 
 <br />
 
