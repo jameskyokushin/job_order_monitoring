@@ -7,8 +7,12 @@ JobOrder001::Application.routes.draw do
   devise_for :users
 
   put "/accomplished/:id" => "pages#accomplished", :as => "accomplished"
-
   
+  match '/sales', 	:to => 'pages#sales'
+  match '/delivery',    :to => 'pages#delivery'
+  match '/joborder',    :to => 'pages#joborder'
+  match '/training',    :to => 'pages#training'
+  match '/collection',    :to => 'pages#collection'
   root :to => "jobs#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

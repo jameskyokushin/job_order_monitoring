@@ -7,7 +7,21 @@ class PagesController < ApplicationController
   
   def current_user
   end
+
+  def sales
+  end
   
+  def delivery
+  end
+  
+  def joborder
+  end
  
+  def training
+  end
+  
+  def collection
+  end
+  
 
 end
