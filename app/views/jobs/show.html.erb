@@ -1,5 +1,5 @@
 <header>
-        <%= image_tag("header.jpg", :alt => "ASI-HEADER", :class => "round") %>
+        <%= image_tag("header2.1.jpg", :alt => "ASI-HEADER", :class => "round") %>
 </headers>
 
 <style type="text/css">
@@ -15,51 +15,51 @@ b { color:#000; font size="4" }
        <th></th>
      </tr>
      <tr>
-       <td><h6><b>Datetime Started:</b><%= @job.created_at %></h6></td>
-       <td><h6><b>Datetime Finished:</b><%= @job.date_time_finished %></h6></td>
+       <td><p><b>Datetime Started:</b><%= @job.created_at %></p></td>
+       <td><p><b>Datetime Finished:</b><%= @job.date_time_finished %></p></td>
      </tr>
      <tr>
-       <td><h6><b>Company:</b><%= @job.company %></h6></td>
-       <td><h6><b>Technical:</b><%= @job.technical %></h6></td>
+       <td><p><b>Company:</b><%= @job.company %></p></td>
+       <td><p><b>Technical:</b><%= @job.technical %></p></td>
      </tr>
      <tr>
-       <td><h6><b>Address:</b><%= @job.address %></h6></td>
-       <td><h6><b>System/model:</b><%= @job.system_model %></h6></td>
+       <td><p><b>Address:</b><%= @job.address %></p></td>
+       <td><p><b>System/model:</b><%= @job.system_model %></p></td>
      </tr>
      <tr>
-       <td><h6><b>Contact Person:</b><%= @job.contact_person %></h6></td>
+       <td><p><b>Contact Person:</b><%= @job.contact_person %></p></td>
        <td></td>
      </tr>
      <tr>
-       <td><h6><b>Contact No:</b><%= @job.contact_no %></h6></td>
+       <td><p><b>Contact No:</b><%= @job.contact_no %></p></td>
        <td></td>
      </tr>
      </table>
      <table border="5" cellpadding="3" cellspacing="3" width="100%">
      <tr>
-       <td><h6><b>To Do:</b><%= @job.todo %></h6></td>
+       <td><p><b>To Do:</b><%= @job.todo %></p></td>
      </tr>
      <tr>
-       <td><h6><b>Work Done:</b><%= @job.work_done %></h6></td>
+       <td><p><b>Work Done:</b><%= @job.work_done %></p></td>
      </tr>
      <tr>
-       <td><h6><b>Remarks:</b><%= @job.remarks %></h6></td>
+       <td><p><b>Remarks:</b><%= @job.remarks %></p></td>
      </tr>
      </table>
      <table border="2" cellpadding="1" cellspacing="1" width="100%">
      <tr>
-       <td><h6><b>Prepared by:</b><%= @job.prepared_by %></h6></td>
-       <td><h6><b>Approved by:</b>____________________</h></td>
+       <td><p><b>Prepared by:</b><%= @job.prepared_by %></p></td>
+       <td><p><b>Approved by:</b>____________________</p></td>
      </tr>
      <tr>
-       <td><h6><b>Status:</b><%= @job.status %></h></td>
-       <td><h6><b>Client Signature:</b>____________________</h></td>
+       <td><p><b>Status:</b><%= @job.status %></p></td>
+       <td><p><b>Client Signature:</b>____________________</p></td>
      </tr>
     
    </table>
  </div>
 </span>
-<!--<input type=button onclick="window.print()" value='PRINT'>-->
+<input type=button onclick="window.print()" value='PRINT'>
 
 
 
