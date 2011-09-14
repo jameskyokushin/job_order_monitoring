@@ -2,43 +2,43 @@
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
   <%= f.input :date_time_started,        :start_year    => Date.current.year,
-                                  :include_blank => false,  
-                                  :label => "Time/Date Started" %>
+                                         :include_blank => false,  
+                                         :label => "Time/Date Started" %>
 
-  <!--<%= f.input :id,            :start    => 2011,
-                                  :label => "Auto Generate" %>-->
+  <!--<%= f.input :id,                   :start    => 2011,
+                                         :label => "Auto Generate" %>-->
 
-  <%= f.input :company,           :label => "Company" %>
+  <%= f.input :company,                  :label => "Company" %>
 
-  <%= f.input :contact_person,    :label => "Contact Person" %>
+  <%= f.input :contact_person,           :label => "Contact Person" %>
 
-  <%= f.input :address,           :label => "Address" %>
+  <%= f.input :address,                  :label => "Address" %>
 
-  <%= f.input :contact_no,        :label => "Contact No:" %>
+  <%= f.input :contact_no,               :label => "Contact No:" %>
 
-  <%= f.input :system_model,      :label => "System / Model" %>
+  <%= f.input :system_model,             :label => "System / Model" %>
 
-  <%= f.input :technical,         :label => "Technical / Installer" %>
+  <%= f.input :technical,                :label => "Technical / Installer" %>
 
-  <%= f.input :todo,              :label => "To Do" %>
+  <%= f.input :todo,                     :label => "To Do" %>
 
-  <%= f.input :work_done,         :label => "Work Done" %>
+  <%= f.input :work_done,                :label => "Work Done" %>
 
-  <%= f.input :remarks,           :label => "Remarks" %>
+  <%= f.input :remarks,                  :label => "Remarks" %>
 
   
 
   <div class="status">
-  <%= f.input :prepared_by,       :include_blank => false, 
-                                  :collection => [["- Select -"," admin "],
+  <%= f.input :prepared_by,              :include_blank => false, 
+                                         :collection => [["- Select -"," admin "],
                                                  ["steven@asi.com.ph", "steven@asi.com.ph"], 
                                                  ["chris@asi.com.ph","chris@asi.com.ph"],
                                                  ["adrian@asi.com.ph", "adrian@asi.com.ph"],
                                                  ["elzy.gensan@asi.com.ph", "elzy.gensan@asi.com.ph"],  
                                                  ["stephene@asi.com.ph", "stephene@asi.com.ph"]] %>
 
-  <%= f.input :status,             :include_blank => false, 
-                                   :collection => [["ONGOING", "ONGOING"],
+  <%= f.input :status,                   :include_blank => false, 
+                                         :collection => [["ONGOING", "ONGOING"],
                                                   ["PENDING", "PENDING"]] %>
    </div>
   <% end %>

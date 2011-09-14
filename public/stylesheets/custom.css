@@ -14,6 +14,9 @@ header img {
 }
 div.jo-link {
  float: right;
+ font-weight: bold;
+ padding: 0 1.7em;
+ 
 }
 section {
   margin-top: 2em;
