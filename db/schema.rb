@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110912010135) do
+ActiveRecord::Schema.define(:version => 20110914070138) do
+
+  create_table "inquiries", :force => true do |t|
+    t.date     "date"
+    t.string   "client_name"
+    t.string   "inq_company_name"
+    t.string   "tel_cel"
+    t.text     "concern"
+    t.text     "request"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "jobs", :force => true do |t|
     t.timestamp "date_time_started"

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @inquiry.date %>
+</p>
+
+<p>
+  <b>Client name:</b>
+  <%= @inquiry.client_name %>
+</p>
+
+<p>
+  <b>Inq company name:</b>
+  <%= @inquiry.inq_company_name %>
+</p>
+
+<p>
+  <b>Tel cel:</b>
+  <%= @inquiry.tel_cel %>
+</p>
+
+<p>
+  <b>Concern:</b>
+  <%= @inquiry.concern %>
+</p>
+
+<p>
+  <b>Request:</b>
+  <%= @inquiry.request %>
+</p>
+
+
+<%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
+<%= link_to 'Back', inquiries_path %>

@@ -1,4 +1,6 @@
 JobOrder001::Application.routes.draw do
+  resources :inquiries
+
   resources :jobs do
     put :mark_as_done, :on => :member
     get :accomplished, :on => :collection
