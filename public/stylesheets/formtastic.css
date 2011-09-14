@@ -31,7 +31,7 @@ form.formtastic ul.errors li { padding:0; border:none; display:list-item; }
 /* FIELDSETS & LISTS
 --------------------------------------------------------------------------------------------------*/
 form.formtastic fieldset { overflow:hidden; } /* clearing contained floats */
-form.formtastic fieldset.inputs { padding-left:0%; padding-right:40%;}
+form.formtastic fieldset.inputs { padding-left:0%; padding-right:10%;}
 form.formtastic fieldset.buttons { float:center; }
 form.formtastic fieldset ol { }
 form.formtastic fieldset.buttons li { float:center; padding-right:0.5em; }
