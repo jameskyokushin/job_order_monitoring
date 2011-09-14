@@ -1,41 +1,6 @@
-<%= form_for(@inquiry) do |f| %>
-  <% if @inquiry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@inquiry.errors.count, "error") %> prohibited this inquiry from being saved:</h2>
+<%= semantic_form_for(@inquiry) do |f| %>
+  <%= f.inputs do %>
 
-      <ul>
-      <% @inquiry.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :client_name %><br />
-    <%= f.text_field :client_name %>
-  </div>
-  <div class="field">
-    <%= f.label :inq_company_name %><br />
-    <%= f.text_field :inq_company_name %>
-  </div>
-  <div class="field">
-    <%= f.label :tel_cel %><br />
-    <%= f.text_field :tel_cel %>
-  </div>
-  <div class="field">
-    <%= f.label :concern %><br />
-    <%= f.text_area :concern %>
-  </div>
-  <div class="field">
-    <%= f.label :request %><br />
-    <%= f.text_area :request %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <% end %>  
+  <%= f.buttons %>
 <% end %>
