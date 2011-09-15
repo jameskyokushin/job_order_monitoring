@@ -39,21 +39,15 @@
 
   
 
-  <div class="status">
+  <div class="status hidden">
   <%= f.input :prepared_by,              :include_blank => false, 
-                                         :collection => [["- Select -"," admin "],
-                                                 ["steven@asi.com.ph", "steven@asi.com.ph"], 
-                                                 ["chris@asi.com.ph","chris@asi.com.ph"],
-                                                 ["adrian@asi.com.ph", "adrian@asi.com.ph"],
-                                                 ["elzy.gensan@asi.com.ph", "elzy.gensan@asi.com.ph"],  
-                                                 ["stephene@asi.com.ph", "stephene@asi.com.ph"]],
-					 :hint => "your IP is detected please indicate your name."%>
-
+                                         :collection => [["- Auto Generated -","  ",current_user.email]],
+					 :hint => ""%>
+  </div>
   <%= f.input :status,                   :include_blank => false, 
                                          :collection => [["ONGOING", "ONGOING"],
                                                   ["PENDING", "PENDING"]],
-					 :hint => "Complete the Field."%>
-   </div>
+					 :hint => "Please Choose if ONGOING or PENDING."%>
   <% end %>
 
   <%= f.buttons %>

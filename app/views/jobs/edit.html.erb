@@ -3,6 +3,7 @@
   <%= link_to 'Ongoing', jobs_path %> |
   <%= link_to "Finished ", accomplished_jobs_path %> |
   <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> 
+  <b><%= current_user.email if user_signed_in? %></b>
 </div>
 <h1>Update Job Order</h1>
 <%= semantic_form_for(@job) do |f| %>
