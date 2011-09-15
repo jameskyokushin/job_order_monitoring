@@ -1,6 +1,20 @@
-<style type="text/css" media="print">
-jo-link { display: none; }
+<style type="text/css">
+   @media print{
+   body{ background-color:#FFFFFF; background-image:none; color:#000000 }
+   #ad{ display:none;}
+   #leftbar{ display:none;}
+   #contentarea{ width:100%;}
+   }
 </style>
+
+
+        <div id="ad">banner here</div>
+        <div id="leftbar">Left bar here</div>
+        <div id="contentarea">Content here</div>
+
+       
+
+
 <div class="jo-link">
 	<%= link_to "Add JO ", new_job_path %> |
 	<%= link_to 'Ongoing', jobs_path %> |
