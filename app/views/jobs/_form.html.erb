@@ -1,12 +1,16 @@
 <div class="email">
 <%= current_user.email if user_signed_in? %>
 </div>
+
+
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
-  <%= f.input :date_time_started,        :start_year    => Date.current.year,
-                                         :include_blank => false,  
-                                         :label => "Time/Date",
-					 :hint => "Please indicate the date and time before proceed."%>
+  <div class="status hidden">
+  <%= f.input :jobdate,                  :include_blank => false, 
+  					 :collection => [["- Auto Generated -","  ",Time.now.in_time_zone("Eastern Time (US & Canada)")]],
+					 :hint => "",
+                                         :label => "Time/Date"%>
+  </div>					 
 
   <!--<%= f.input :id,                   :start    => 2011,
                                          :label => "Auto Generate" %>-->
