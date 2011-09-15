@@ -15,7 +15,7 @@ JobOrder001::Application.routes.draw do
   match '/joborder',    :to => 'pages#joborder'
   match '/training',    :to => 'pages#training'
   match '/collection',    :to => 'pages#collection'
-  root :to => "jobs#index"
+  root :to => "pages#sales"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
