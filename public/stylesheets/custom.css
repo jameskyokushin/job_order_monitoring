@@ -108,4 +108,9 @@ div.signout {
  float: right;
 }
 
+div.email {
+ font-weight: bold;
+ text-align: right;
+ margin-right: 2%;
+}
 

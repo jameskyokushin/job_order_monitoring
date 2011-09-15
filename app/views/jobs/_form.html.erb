@@ -1,4 +1,6 @@
-
+<div class="email">
+<%= current_user.email if user_signed_in? %>
+</div>
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
   <%= f.input :date_time_started,        :start_year    => Date.current.year,

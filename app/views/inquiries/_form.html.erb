@@ -1,3 +1,6 @@
+<div class="email">
+<%= current_user.email if user_signed_in? %>
+</div>
 <%= semantic_form_for(@inquiry) do |f| %>
   <%= f.inputs do %>
   <%= f.input :date,                     :include_blank => false,  
@@ -21,6 +24,8 @@
   
   <%= f.input :request,                  :label => "Request",
   					 :hint => "Complete the field" %>
+
+  
 
   
   <% end %>  

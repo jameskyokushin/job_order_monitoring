@@ -4,6 +4,9 @@
   <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> 
 </div>
 <h1>Telephone Inquiry</h1>
+<div class="email">
+<%= current_user.email if user_signed_in? %>
+</div>
 
 <table>
   <tr>
