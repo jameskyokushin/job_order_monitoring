@@ -2,59 +2,94 @@
 <%= current_user.email if user_signed_in? %>
 </div>
 
-
+<div class="status hidden">
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
-  <%= f.input :date_time_started,        :include_blank => false, 
+  <%= f.input :jobdate,                  :include_blank => false, 
   					 :collection => [["- Auto Generated -","  ",Time.now.in_time_zone("Eastern Time (US & Canada)")]],
 					 :hint => "",
                                          :label => "Time/Date"%>
 					 
 
-  <!--<%= f.input :id,                   :start    => 2011,
-                                         :label => "Auto Generate" %>-->
+  <%= f.input :id,                   :start    => 2011,
+                                         :label => "Auto Generate" %>
 
-  <%= f.input :company,                  :label => "Company",
-					 :hint => "Complete the Field."%>
+ 
 
-  <%= f.input :contact_person,           :label => "Contact Person",
-					 :hint => "Complete the Field."%>
-  					 
 
-  <%= f.input :address,                  :label => "Address",
-                                         :hint => "Complete the Field."%>
 
-  <%= f.input :contact_no,               :label => "Contact No:",
- 					 :hint => "+63917-1234567 Sample format."%>
 
-  <%= f.input :system_model,             :label => "System / Model",
-                                         :hint => "Complete the Field."%>
-
-  <%= f.input :technical,                :label => "Technical / Installer",
-				   	 :hint => "if more than installer put ' / ' after name."%>
-
-  <%= f.input :todo,                     :label => "To Do",
-					 :hint => "Complete the Field."%>
-
-  <%= f.input :work_done,                :label => "Work Done",
-					 :hint => "Complete the Field."%>
-
-  <%= f.input :remarks,                  :label => "Remarks",
-					 :hint => "Complete the Field."%>
-
-  
-
-  <div class="status hidden">
   <%= f.input :prepared_by,              :include_blank => false, 
                                          :collection => [["- Auto Generated -","  ",current_user.email]],
 					 :hint => ""%>
   </div>
-  <%= f.input :status,                   :include_blank => false, 
-                                         :collection => [["ONGOING", "ONGOING"],
-                                                  ["PENDING", "PENDING"]],
-					 :hint => "Please Choose if ONGOING or PENDING."%>
+  
   <% end %>
 
-  <%= f.buttons %>
   
+  
+<% end %>
+<%= semantic_form_for(@job) do |f| %>
+  <%= f.inputs do %>
+<table width="750" border="1" align="center">
+<tr>
+<th width="114" scope="col">&nbsp;</th>
+<th width="247" scope="col">&nbsp;</th>
+<th width="114" scope="col">&nbsp;</th>
+<th width="247" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<td>Company Name </td>
+<td><%= f.input :company, :label => ":"%></td>
+<td>System/Model </td>
+<td><%= f.input :system_model, :label => ":"%></td>
+</tr>
+<tr>
+<td>Contact Person </td>
+<td><%= f.input :contact_person, :label => ":"%></td>
+<td>Technical </td>
+<td><%= f.input :technical, :label => ":" %></td>
+</tr>
+<tr>
+<td>Address  </td>
+<td><%= f.input :address, :label => ":"%></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Contact Number </td>
+<td><%= f.input :contact_no, :label => ":"%></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<table width="750" border="1" align="center">
+<tr>
+<th width="89" scope="col">&nbsp;</th>
+<th width="667" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<td>To Do:</td>
+<td height="90"><%= f.input :todo, :label => "."%></td>
+</tr>
+<tr>
+<td>Work Done:</td>
+<td height="90"><%= f.input :work_done, :label => "."%></td>
+</tr>
+<tr>
+<td>Remarks:</td>
+<td height="90"><%= f.input :remarks, :label => "."%></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<% end %>
+<table width="100" border="1" align="center">
+<tr>
+<th scope="col"><div align="center"><%= f.buttons %></div></th>
+</tr>
+</table>
+<p>&nbsp;</p>
 <% end %>
