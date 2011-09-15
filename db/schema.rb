@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110915154215) do
+ActiveRecord::Schema.define(:version => 20110915181343) do
 
   create_table "inquiries", :force => true do |t|
     t.date     "date"
