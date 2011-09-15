@@ -1,8 +1,12 @@
+<style type="text/css" media="print">
+jo-link { display: none; }
+</style>
 <div class="jo-link">
 	<%= link_to "Add JO ", new_job_path %> |
 	<%= link_to 'Ongoing', jobs_path %> |
 	<%= link_to "Finished ", accomplished_jobs_path %> |
 	<%= link_to "Sign out", destroy_user_session_path, :method=> :delete %>
+
 </div>
   <header>
    <%= image_tag("header2.1.jpg", :alt => "ASI-HEADER", :class => "round") %>
@@ -16,8 +20,8 @@
 <div align="left">
     <table border="2" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <th width="47%"><h4><b>Generated Job-order NO:</b> 2011-0<%= @job.id %></h4></th>
-        <th width="53%"></th>
+        <th width="55%"><h4><b>Generated Job-order NO:</b> 2011-0<%= @job.id %></h4></th>
+        <th width="45%"></th>
       </tr>
       <tr>
         <td><p><b>Generated Date:</b><%= @job.date_time_started %></p></td>
@@ -53,8 +57,8 @@
     </table>
     <table border="2" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <td width="47%"><p><b>Prepared by:</b><%= @job.prepared_by %></p></td>
-        <td width="53%"><p><b>Approved by:</b>____________________</p></td>
+        <td width="55%"><p><b>Prepared by:</b><%= @job.prepared_by %></p></td>
+        <td width="45%"><p><b>Approved by:</b>____________________</p></td>
       </tr>
       <tr>
         <td><p><b>Status:</b><%= @job.status %></p></td>
@@ -65,8 +69,4 @@
 </div>
   </span> 
    <input type=button onclick="window.print()" value='PRINT'>
-<SCRIPT LANGUAGE="JavaScript">
-if (window.print) {
-document.write('<form><input type=button name=print value="Print" onClick="window.print()"></form>');
-}
-</script>
+
