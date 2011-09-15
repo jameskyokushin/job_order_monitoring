@@ -5,12 +5,11 @@
 
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
-  <div class="status hidden">
-  <%= f.input :jobdate,                  :include_blank => false, 
+  <%= f.input :date_time_started,        :include_blank => false, 
   					 :collection => [["- Auto Generated -","  ",Time.now.in_time_zone("Eastern Time (US & Canada)")]],
 					 :hint => "",
                                          :label => "Time/Date"%>
-  </div>					 
+					 
 
   <!--<%= f.input :id,                   :start    => 2011,
                                          :label => "Auto Generate" %>-->
