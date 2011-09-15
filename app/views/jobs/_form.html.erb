@@ -11,11 +11,13 @@
                                          :label => "Time/Date"%>
 					 
 
-  <%= f.input :id,                   :start    => 2011,
+  <%= f.input :id,                       :start_year    => 2011,
                                          :label => "Auto Generate" %>
 
  
-
+  <%= f.input :status,                   :include_blank => false, 
+                                         :collection => [["-Ongoing -"," Ongoing "]],
+					 :hint => ""%>
 
 
 
@@ -23,14 +25,9 @@
                                          :collection => [["- Auto Generated -","  ",current_user.email]],
 					 :hint => ""%>
   </div>
-  
-  <% end %>
+ 
 
-  
-  
-<% end %>
-<%= semantic_form_for(@job) do |f| %>
-  <%= f.inputs do %>
+
 <table width="750" border="1" align="center">
 <tr>
 <th width="114" scope="col">&nbsp;</th>
@@ -53,8 +50,8 @@
 <tr>
 <td>Address  </td>
 <td><%= f.input :address, :label => ":"%></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td>Status</td>
+<td><%= f.input :status, :collection => [["-Ongoing -"," Ongoing "]], :label => "." %></td>
 </tr>
 <tr>
 <td>Contact Number </td>
@@ -87,6 +84,8 @@
 </table>
 <% end %>
 <table width="100" border="1" align="center">
+<div class="status hidden">
+
 <tr>
 <th scope="col"><div align="center"><%= f.buttons %></div></th>
 </tr>
