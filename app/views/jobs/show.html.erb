@@ -1,20 +1,20 @@
 <style type="text/css">
    @media print{
    
-   jo-link{ display:none;}
+   #ad{ display:none;}
    #leftbar{ display:none;}
    #contentarea{ width:100%;}
    }
 </style>
 
 
-        <div id="ad">banner here</div>
-        <div id="leftbar">Left bar here</div>
-        <div id="contentarea">Content here</div>
+        <div class="ad">banner here</div>
+        <div class="leftbar">Left bar here</div>
+        <div class="contentarea">Content here</div>
 
        
 
-<div class="jo-link">
+<div class="jo-link ad">
 	<%= link_to "Add JO ", new_job_path %> |
 	<%= link_to 'Ongoing', jobs_path %> |
 	<%= link_to "Finished ", accomplished_jobs_path %> |
