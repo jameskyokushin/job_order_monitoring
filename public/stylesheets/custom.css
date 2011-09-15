@@ -12,7 +12,7 @@ header img {
   background: #fff;
   width: 800px;
 }
-div.jo-link {
+#link {
  float: right;
  font-weight: bold;
  padding: 0 1.7em;
