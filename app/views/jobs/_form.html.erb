@@ -2,11 +2,12 @@
 <%= current_user.email if user_signed_in? %>
 </div>
 
+
 <div class="status hidden">
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
   <%= f.label :date_time_started %><br />
-  <%= f.datetime_select :date_time_started %>
+  <%= f.datetime_select :date_time_started, :as => DateTime.now.strftime("%M %d, %Y") %>
 					 
 
   <%= f.input :id,                       :start_year    => 2011,
