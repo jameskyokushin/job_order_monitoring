@@ -1,9 +1,12 @@
+
+
+
 <%= semantic_form_for(@inquiry) do |f| %>
   <%= f.inputs do %>
-  <%= f.input :date,                     :include_blank => false,  
-				         :start_year    => Date.current.year,
-				         :label => "Date",
-					 :hint => "Please indicate the date before proceed."%>
+  <div class="hidden">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
 
   <%= f.input :client_name,              :label => "Caller Name",
 					 :hint => "Complete the field."%>
