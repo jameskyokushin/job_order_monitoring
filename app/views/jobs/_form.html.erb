@@ -29,66 +29,100 @@
 
 
 <table width="750" border="1" align="center">
-<tr>
-<th width="114" scope="col">&nbsp;</th>
-<th width="247" scope="col">&nbsp;</th>
-<th width="114" scope="col">&nbsp;</th>
-<th width="247" scope="col">&nbsp;</th>
-</tr>
-<tr>
-<td>Company Name </td>
-<td><%= f.input :company, :label => ":"%></td>
-<td>System/Model </td>
-<td><%= f.input :system_model, :label => ":"%></td>
-</tr>
-<tr>
-<td>Contact Person </td>
-<td><%= f.input :contact_person, :label => ":"%></td>
-<td>Technical </td>
-<td><%= f.input :technical, :label => ":" %></td>
-</tr>
-<tr>
-<td>Address  </td>
-<td><%= f.input :address, :label => ":"%></td>
-<td>Status</td>
-<td><%= f.input :status, :collection => [["-Ongoing -"," Ongoing "]], :label => "." %></td>
-</tr>
-<tr>
-<td>Contact Number </td>
-<td><%= f.input :contact_no, :label => ":"%></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
+   <tr>
+      <th width="114" scope="col">&nbsp;</th>
+      <th width="247" scope="col">&nbsp;</th>
+      <th width="114" scope="col">&nbsp;</th>
+      <th width="247" scope="col">&nbsp;</th>
+   </tr>
+   <tr>
+      <td>Company Name </td>
+      <td><%= f.input :company, :label => ":"%></td>
+      <td>Category / System </td>
+      <td><%= f.input :system_model,    :include_blank => false, 
+					:collection => [["- Select -"," Blank "],
+							["Automatic Gates"," Automatic Gates"],
+ 					 	        ["Metal Detectors","Metal Detectors"],
+							["CCTV","CCTV"],
+							["Access Control","Access Control"],
+							["Intrusion","Intrusion"],
+							["Fire Alarm","Fire Alarm"],
+							["Light Automation","Light Automation"],
+							["Automated Window Treatment","Automated Window Treatment"],
+							["Home Run","Home Run"],
+							["Installation Accessories","Installation Accessories"],
+							["Cable","Cable"],
+ 							["Radio","Radio"],
+							["Voip","Voip"],
+							["Network Cabinet","Network Cabinet"],
+							["Public Address System","Public Address System"],
+							["Telecom","Telecom"],
+							["Id Printer","Id Printer"],
+							["Pc Pheripherals","Pc Pheripherals"],
+							["Card","Card"],
+							["Networking","Networking"],
+							["Door Automation","Door Automation"],
+							["Parking System","Parking System"],
+							["Turnstile","Turnstile"],
+							["Blank","Blank"],
+							["Others","Others"],
+							["Others","Others"]],
+							:label => ":"%></td>
+   </tr>
+   <tr>
+      <td>Contact Person </td>
+      <td><%= f.input :contact_person, :label => ":"%></td>
+      <td>Technical </td>
+      <td><%= f.input :technical, :label => ":" %></td>
+   </tr>
+   <tr>
+      <td>Address  </td>
+      <td><%= f.input :address, :label => ":"%></td>
+      <td>Status</td>
+      <td><%= f.input :status, :collection => [["-Ongoing -"," Ongoing "],["Finished","Finished"]], 
+	                       :include_blank => false,  
+                               :label => "." %></td>
+      </tr>
+   <tr>
+      <td>Contact Number </td>
+      <td><%= f.input :contact_no, :label => ":"%></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+   </tr>
 </table>
-<table width="750" border="1" align="center">
-<tr>
-<th width="89" scope="col">&nbsp;</th>
-<th width="667" scope="col">&nbsp;</th>
-</tr>
-<tr>
-<td>To Do:</td>
-<td height="90"><%= f.input :todo, :label => "."%></td>
-</tr>
-<tr>
-<td>Work Done:</td>
-<td height="90"><%= f.input :work_done, :label => "."%></td>
-</tr>
-<tr>
-<td>Remarks:</td>
-<td height="90"><%= f.input :remarks, :label => "."%></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
+   <table width="750" border="1" align="center">
+   <tr>
+      <th width="89" scope="col">&nbsp;</th>
+      <th width="667" scope="col">&nbsp;</th>
+      </tr>
+   <tr>
+      <td>To Do:</td>
+      <td height="90"><%= f.input :todo, :label => "."%></td>
+   </tr>
+   <tr>
+      <td>Work Done:</td>
+      <td height="90"><%= f.input :work_done, :label => "."%></td>
+   </tr>
+   <tr>
+      <td>Remarks:</td>
+      <td height="90"><%= f.input :remarks, :label => "."%></td>
+   </tr>
+   <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+   </tr>
 </table>
-<% end %>
-<table width="100" border="1" align="center">
-<div class="status hidden">
 
-<tr>
-<th scope="col"><div align="center"><%= f.buttons %></div></th>
-</tr>
+<% end %>
+
+<table width="100" border="1" align="center">
+     <div class="status hidden">
+
+        <tr>
+            <th scope="col"><div align="center"><%= f.buttons %></div></th>
+        </tr>
 </table>
 <p>&nbsp;</p>
+
 <% end %>
+
