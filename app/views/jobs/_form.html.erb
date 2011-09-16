@@ -5,8 +5,8 @@
 <div class="status hidden">
 <%= semantic_form_for(@job) do |f| %>
   <%= f.inputs do %>
-  <%= f.label :date_time_started %><br />
-  <%= f.datetime_select :date_time_started %>
+  <%= f.label :jdate %><br />
+  <%= f.datetime_select :jdate %>
 					 
 
   <%= f.input :id,                       :start_year    => 2011,
@@ -78,7 +78,7 @@
       <td>Address  </td>
       <td><%= f.input :address, :label => ":"%></td>
       <td>Status</td>
-      <td><%= f.input :status, :collection => [["-Ongoing -"," Ongoing "],["Finished","Finished"]], 
+      <td><%= f.input :status, :collection => [["- ONGOING -"," ONGOING "],[" FINISHED "," FINISHED "]], 
 	                       :include_blank => false,  
                                :label => "." %></td>
       </tr>

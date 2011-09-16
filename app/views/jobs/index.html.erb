@@ -13,6 +13,7 @@
 </div>
 <table>
   <tr>
+    <th>Created Date:</th>
     <th>Ref No:</th>
     <th>Company</th>
     <th>Technical</th>
@@ -24,6 +25,7 @@
 
 <% @jobs.each do |job| %>
   <tr>
+    <td><%= job.jdate %></td>
     <td><%= link_to job.id, job_path(job) %></td>
     <td><%= job.company %></td>
     <td><%= job.technical %></td>
