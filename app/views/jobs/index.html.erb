@@ -25,7 +25,7 @@
 
 <% @jobs.each do |job| %>
   <tr>
-    <td></td>
+    <td><%= job.jdate %></td>
     <td><%= link_to job.id, job_path(job) %></td>
     <td><%= job.company %></td>
     <td><%= job.technical %></td>
