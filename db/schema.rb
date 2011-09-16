@@ -13,40 +13,51 @@
 
 ActiveRecord::Schema.define(:version => 20110916133333) do
 
+  create_table "inquiries", :force => true do |t|
+    t.date      "date"
+    t.string    "client_name"
+    t.string    "inq_company_name"
+    t.string    "tel_cel"
+    t.text      "concern"
+    t.text      "request"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
+
   create_table "jobs", :force => true do |t|
-    t.datetime "date_time_started"
-    t.string   "company"
-    t.string   "address"
-    t.string   "technical"
-    t.string   "ref_no"
-    t.string   "contact_no"
-    t.string   "system_model"
-    t.string   "contact_person"
-    t.text     "todo"
-    t.text     "work_done"
-    t.text     "remarks"
-    t.datetime "date_time_finished"
-    t.string   "prepared_by"
-    t.string   "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "done"
-    t.date     "jdate"
+    t.timestamp "date_time_started"
+    t.string    "company"
+    t.string    "address"
+    t.string    "technical"
+    t.string    "ref_no"
+    t.string    "contact_no"
+    t.string    "system_model"
+    t.string    "contact_person"
+    t.text      "todo"
+    t.text      "work_done"
+    t.text      "remarks"
+    t.timestamp "date_time_finished"
+    t.string    "prepared_by"
+    t.string    "status"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.boolean   "done"
+    t.date      "jdate"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email",                                 :default => "", :null => false
+    t.string    "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string    "reset_password_token"
+    t.timestamp "reset_password_sent_at"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",                         :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
