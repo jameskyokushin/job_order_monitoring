@@ -1,4 +1,5 @@
 JobOrder001::Application.routes.draw do
+
   resources :jobs do
     put :mark_as_done, :on => :member
     get :accomplished, :on => :collection
@@ -13,7 +14,7 @@ JobOrder001::Application.routes.draw do
   match '/joborder',    :to => 'pages#joborder'
   match '/training',    :to => 'pages#training'
   match '/collection',    :to => 'pages#collection'
-  root :to => "pages#sales"
+  root :to => "pages#joborder"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
